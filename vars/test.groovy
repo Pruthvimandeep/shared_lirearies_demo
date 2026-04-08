@@ -1,4 +1,4 @@
-def docker_push(user,pass1,image,repo){
+def docker_push(user,pass,image,repo){
   sh "docker login -u ${user} -p ${pass}"
   sh "docker pull ${image}"
   sh "docker tag ${image} ${repo}/${image}"
